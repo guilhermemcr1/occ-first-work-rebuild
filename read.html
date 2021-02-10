@@ -3,6 +3,8 @@
 <head>
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <title>Readed</title>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
         </li>
         </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar Livros" aria-label="Search">
+        <input class="form-control me-2" id="pesquisa" type="text" placeholder="Buscar Livros" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
     </div>
@@ -53,18 +55,18 @@
               <ol class="books-grid">
                   <div class="book">
                    <div class="card" style="width: 18rem;">
-		<div class="book-cover"
+		<div class="book-cover" 
 			style='width:128px;height:192px;background-image:url("https://books.google.com/books/content?id=32haAAAAMAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72yckZ5f5bDFVIf7BGPbjA0KYYtlQ__nWB-hI_YZmZ-fScYwFy4O_fWOcPwf-pgv3pPQNJP_sT5J_xOUciD8WaKmevh1rUR-1jk7g1aCD_KeJaOpjVu0cm_11BBIUXdxbFkVMdi&source=gbs_api")'>
 		</div>
 		
 		<div class="card-body">
-			<p class="book-title">The Adventures of Tom Sawyer</p>
-			<p class="book-authors">Mark Twain</p>
+			<p class="book-title text-center">The Adventures of Tom Sawyer</p>
+			<p class="book-authors text-center">Mark Twain</p>
 		</div>
 			
 			<select class="form-select" aria-label="Default select example">
 				<option selected disabled>Move to...</option>
-				<option value="wantToRead">Want to read</option>
+				<option value="wantToRead" id="alert" >Want to read</option>
 				<option value="read">Currently Reading</option>
 			</select>
   
@@ -78,19 +80,20 @@
 	 </div>
 	</div>
    </div>
-	  
+    
+   <footer class="footer">
+    <div class="container">
+      <span class="text-muted bg-black">Página em desenvolvimento por Guilherme Galarça</span>
+    </div>
+  </footer>
+
 </body>
+<script src="js/api.js"></script>
+<script src="js/search.js"></script>
+<script src="js/move.js"></script>
 <script>
   $(document).ready(function () {
     // TODO: escrever funcionalidade do app
   })
 </script>
-<footer class="bg-light text-center text-lg-start">
-  <!-- Copyright -->
-  <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2)">
-    Desenvolvido por Guilherme Galarça
-  </div>
-  <!-- Copyright -->
-</footer>
-
 </html>
